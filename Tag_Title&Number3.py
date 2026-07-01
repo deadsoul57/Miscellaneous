@@ -33,6 +33,8 @@ def fix_audio_tags_and_tracks(directory_path, force_three_digits=True):
     
     # Сортуємо файли за іменем (в алфавітному порядку)
     audio_files.sort(key=lambda x: x.name.lower())
+    # Сортування за датою файлу 
+#    audio_files.sort(key=lambda x: x.stat().st_mtime)
 
     total_files = len(audio_files)
     if total_files == 0:
